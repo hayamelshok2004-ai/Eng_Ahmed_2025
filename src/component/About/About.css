@@ -1,0 +1,36 @@
+.Album-container {
+  background: linear-gradient(180deg, #b3e5ff, #e0f7ff);
+  min-height: 100vh;
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.About-title {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.About-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.About-item {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.About-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}

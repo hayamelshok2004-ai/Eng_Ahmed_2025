@@ -1,0 +1,28 @@
+/* خلفية متدرجة */
+.custom-navbar {
+  background: linear-gradient(90deg, #87cefa, #007bff);
+  padding: 10px 20px;
+  position: fixed;   /* يثبت الـ Navbar بالأعلى */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;     /* تأكد إنها فوق كل العناصر */
+}
+
+/* اللوجو */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* الروابط */
+.nav-link {
+  color: black !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}

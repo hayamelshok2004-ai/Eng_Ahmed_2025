@@ -1,0 +1,38 @@
+.Contact-container {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #b3e5ff, #e0f7ff);
+  min-height: 100vh;
+}
+
+.Contact-title {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.Contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* ألوان مميزة لكل أيقونة */
+.whatsapp { color: #25D366; }
+.facebook { color: #3b5998; }
+.instagram { color: #E1306C; }
+.email { color: #FF5722; }
+
+/* تأثير عند المرور بالماوس */
+.icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
