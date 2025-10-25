@@ -1,12 +1,12 @@
-/* خلفية متدرجة */
+/* الخلفية */
 .custom-navbar {
   background: linear-gradient(90deg, #87cefa, #007bff);
   padding: 10px 20px;
-  position: fixed;   /* يثبت الـ Navbar بالأعلى */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2000;     /* تأكد إنها فوق كل العناصر */
+  z-index: 2000;
 }
 
 /* اللوجو */
@@ -25,4 +25,28 @@
 
 .nav-link:hover {
   color: #fff !important;
+}
+
+/* ✅ تعديل للتجاوب مع الموبايل */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 8px 15px;
+  }
+
+  /* خلي الروابط تتراص تحت بعض في القائمة المنسدلة */
+  .navbar-collapse {
+    background: linear-gradient(90deg, #87cefa, #007bff);
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
 }

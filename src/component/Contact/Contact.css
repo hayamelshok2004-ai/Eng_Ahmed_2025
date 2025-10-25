@@ -36,3 +36,34 @@
   transform: scale(1.2);
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
+
+/* ✅ التجاوب مع الموبايل */
+@media (max-width: 768px) {
+  .Contact-container {
+    padding: 70px 10px;
+  }
+
+  .Contact-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .Contact-icons {
+    gap: 25px;
+  }
+
+  .icon {
+    font-size: 2.2rem;
+  }
+}
+
+/* ✅ لشاشات أصغر جدًا (مثل الهواتف القديمة) */
+@media (max-width: 480px) {
+  .Contact-title {
+    font-size: 1.4rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
