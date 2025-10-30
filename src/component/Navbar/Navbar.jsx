@@ -9,7 +9,7 @@ export default function Navbar() {
         {/* شعار النادي + الاسم */}
         <Link className="navbar-brand d-flex align-items-center fw-bold text-dark" to="/">
           <img
-            src="/logo_smoha.jpeg"
+            src="/21.jpeg"
             alt="Smoha Logo"
             style={{
               width: "45px",
@@ -50,7 +50,13 @@ export default function Navbar() {
               <Link className="nav-link text-dark fw-semibold" to="/contact">
                 Contact
               </Link>
-            </li>
+               </li>
+               <li className="nav-item">
+             <Link className="nav-link" to="/videos">Videos</Link>
+              </li>
+              <li className="nav-item">
+              <Link className="nav-link" to="/certifications">certifications</Link>
+              </li>
           </ul>
 
         </div>

@@ -1,8 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Album.css";
 
 export default function Album() {
-  // مصفوفة الصور — غيّري المسارات حسب صورك
   const images = [
     "./2.jpg",
     "./3.jpg",
@@ -16,7 +16,7 @@ export default function Album() {
     "./11.jpg",
     "./12.jpg",
     "./13.jpg",
-     "./14.jpg",
+    "./14.jpg",
     "./15.jpg",
     "./16.jpg",
     "./17.jpg",
@@ -26,7 +26,9 @@ export default function Album() {
     "./21.jpg",
     "./22.jpg",
     "./23.jpg",
-
+    "./N24.jpg",
+    "./25.jpg",
+    "./26.jpg",
   ];
 
   return (
@@ -34,9 +36,22 @@ export default function Album() {
       <h2 className="Album-title">📸 ألبوم الصور</h2>
       <div className="Album-grid">
         {images.map((img, index) => (
-          <div key={index} className="Album-item">
-            <img src={img} alt={`Gallery ${index}`} />
-          </div>
+          <motion.div
+            key={index}
+            className="Album-item"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
+          >
+            <motion.img
+              src={img}
+              alt={`Gallery ${index}`}
+              className="album-img"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            />
+          </motion.div>
         ))}
       </div>
     </div>
