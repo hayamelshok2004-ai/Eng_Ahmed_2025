@@ -8,16 +8,16 @@ export default function Home() {
       style={{
         marginTop: "100px",
         backgroundImage: `url('/21.jpeg')`, // شعار نادي سموحة
-        backgroundSize: "300px", // حجم الشعار
-        backgroundPosition: "center top 50px", // موقعه في الصفحة
+        backgroundSize: "300px",
+        backgroundPosition: "center top 50px",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "#e0f7ff", // خلفية سماوية ناعمة
+        backgroundColor: "#e0f7ff",
         minHeight: "100vh",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* طبقة شفافية خفيفة على الخلفية */}
+      {/* طبقة شفافية خفيفة */}
       <div
         style={{
           position: "absolute",
@@ -30,41 +30,76 @@ export default function Home() {
         }}
       ></div>
 
-      {/* صورة البروفايل المتحركة */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.7, y: -50 }}
-        animate={{ opacity: 1, scale: 1, y: [0, 10, -10, 0] }}
-        transition={{
-          duration: 3,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatDelay: 1.5,
-        }}
-        style={{
-          width: "300px",
-          height: "300px",
-          borderRadius: "50%",
-          backgroundColor: "#fff",
-          border: "5px solid #007bff",
-          padding: "10px",
-          overflow: "hidden",
-          boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)",
-          display: "inline-block",
-          position: "relative",
-          zIndex: 1,
-        }}
+      {/* صورة البروفايل + الرسالة بجوارها */}
+      <div
+        className="d-flex justify-content-center align-items-center gap-3"
+        style={{ position: "relative", zIndex: 1 }}
       >
-        <img
-          src="/1.jpg"
-          alt="profile"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            borderRadius: "50%",
+        {/* صورة البروفايل المتحركة */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7, y: -50 }}
+          animate={{ opacity: 1, scale: 1, y: [0, 10, -10, 0] }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 1.5,
           }}
-        />
-      </motion.div>
+          style={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "50%",
+            backgroundColor: "#fff",
+            border: "5px solid #007bff",
+            padding: "10px",
+            overflow: "hidden",
+            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)",
+            display: "inline-block",
+          }}
+        >
+          <img
+            src="/1.jpg"
+            alt="profile"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              borderRadius: "50%",
+            }}
+          />
+        </motion.div>
+
+        {/* الرسالة النصية بجوار الصورة */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            y: [0, -5, 0],
+          }}
+          transition={{
+            delay: 1,
+            duration: 1,
+            repeat: Infinity,
+            repeatDelay: 3,
+          }}
+          style={{
+            backgroundColor: "#fff",
+            borderRadius: "15px",
+            padding: "8px 12px",
+            boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
+            textAlign: "right",
+            maxWidth: "200px",
+            fontSize: "15px",
+            lineHeight: "1.5",
+          }}
+        >
+          👉 <strong> اضغط فوق للتصفح </strong> 👆👆<br />
+          <span style={{ color: "#007bff", fontWeight: "bold" }}>
+            اضغط اعلى  لعرض الصور والفيديوهات
+          </span>
+        </motion.div>
+      </div>
 
       {/* الاسم */}
       <motion.h2
