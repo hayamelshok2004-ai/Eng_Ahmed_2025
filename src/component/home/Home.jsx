@@ -6,8 +6,8 @@ export default function Home() {
     <div
       className="text-center mt-5 pt-5"
       style={{
-        marginTop: "100px",
-        backgroundImage: `url('/21.jpeg')`, // شعار نادي سموحة
+        marginTop: "60px", // قربنا الصفحة كلها شوية من الـ Navbar
+        backgroundImage: `url('/21.jpeg')`,
         backgroundSize: "300px",
         backgroundPosition: "center top 50px",
         backgroundRepeat: "no-repeat",
@@ -69,13 +69,13 @@ export default function Home() {
           />
         </motion.div>
 
-        {/* الرسالة النصية بجوار الصورة */}
+        {/* الرسالة النصية المرفوعة للأعلى */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 50, y: -120 }}
           animate={{
             opacity: 1,
             x: 0,
-            y: [0, -5, 0],
+            y: [-120, -160, -120],
           }}
           transition={{
             delay: 1,
@@ -89,14 +89,14 @@ export default function Home() {
             padding: "8px 12px",
             boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
             textAlign: "right",
-            maxWidth: "200px",
+            maxWidth: "220px",
             fontSize: "15px",
             lineHeight: "1.5",
           }}
         >
           👉 <strong> اضغط فوق للتصفح </strong> 👆👆<br />
           <span style={{ color: "#007bff", fontWeight: "bold" }}>
-            اضغط اعلى  لعرض الصور والفيديوهات
+            اضغط اعلى لعرض الصور والفيديوهات
           </span>
         </motion.div>
       </div>
